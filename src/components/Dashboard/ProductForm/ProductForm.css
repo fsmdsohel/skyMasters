@@ -1,0 +1,74 @@
+.input_item {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_item>select,
+.input_item>input {
+  height: 50px;
+  outline: none;
+  border: none;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: var(--dark-color-light);
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  color: var(--main-text-color);
+}
+
+.input_item>select:focus,
+.input_item>input:focus,
+.input_item>textarea:focus {
+  box-shadow: 0px 0px 0px 3px var(--main-color);
+}
+
+.input_item>input::placeholder {
+  color: #8c8d8b;
+}
+
+.input_item>textarea {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--dark-color-light);
+  font-weight: 600;
+  padding: 10px;
+  color: var(--main-text-color);
+}
+
+.input_item>textarea::placeholder {
+  color: #8c8d8b;
+}
+
+.input_item>label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.input_item>input {
+  padding: 0 15px;
+}
+
+.add_product_form {
+  width: 100%;
+  max-width: 700px;
+
+}
+
+/* #car-upload-photo{} */
+#car-upload-photo {
+  line-height: 35px;
+}
+
+#car-upload-photo::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+#car-upload-photo::before {
+  content: "Upload Photo";
+  display: inline-block;
+  background: var(--dark-color-light);
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+}

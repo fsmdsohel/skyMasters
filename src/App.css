@@ -1,0 +1,162 @@
+:root {
+  --main-color: #f88e68;
+  --main-text-color: #3d3d36;
+  --main-text-light: #55554d;
+  --dark-color: #fff;
+  --dark-color-light: #f8d2c4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: var(--dark-color);
+  color: var(--main-text-color);
+}
+
+.btn_round {
+  background-color: var(--main-color);
+}
+
+.btn_round,
+.btn_round_outline {
+  border: none;
+  color: var(--main-text-color);
+  max-width: 200px;
+  width: 100%;
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.btn_round_outline {
+  background-color: #fff;
+  border: 3px solid #fff;
+  color: var(--main-text-color);
+}
+
+.btn_round:hover {
+  color: var(--main-text-color);
+  background-color: #fff;
+  box-shadow: rgba(54, 61, 57, 0.281) 0px 4px 12px;
+  border-color: var(--main-text-color);
+}
+
+.btn_round_outline:hover {
+  color: var(--main-color);
+  border-color: #fff;
+  background-color: #fff;
+}
+
+.fa.fa-star.fa-2x {
+  color: var(--main-color);
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+.card_item>.img-fluid {
+  width: auto;
+}
+
+.fas.fa-info-circle {
+  font-size: 20px;
+  color: #00b6d2;
+}
+
+.status.pending {
+  color: #fa3263;
+}
+
+.status.done {
+  color: #59af8a;
+}
+
+.status.on-going {
+  color: #ffb247;
+}
+
+/* spinner */
+.spinner_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--dark-color-light);
+  z-index: 9999;
+  transition: all 0.3s ease-in;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.spinner_container.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.swiper-pagination-bullet {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.spinner_wrapper {
+  width: 200px;
+  height: 200px;
+}
+
+
+
+@keyframes animation {
+  0% {
+    stroke-dasharray: 1 98;
+    stroke-dashoffset: -105;
+  }
+
+  50% {
+    stroke-dasharray: 80 10;
+    stroke-dashoffset: -160;
+  }
+
+  100% {
+    stroke-dasharray: 1 98;
+    stroke-dashoffset: -300;
+  }
+}
+
+#spinner {
+  transform-origin: center;
+  animation-name: animation;
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier;
+  animation-iteration-count: infinite;
+}
